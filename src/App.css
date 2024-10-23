@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content-wrapper {
+  display: flex;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar {
+  width: 220px; /* Adjust this based on the sidebar expanded/collapsed state */
+  transition: width 0.3s;
+}
+
+.main-content {
+  flex: 1; /* This makes the main content take up the remaining space */
+  padding: 20px;
+  transition: margin-left 0.3s; /* Smooth transition when sidebar changes */
+}
+
+/* When the sidebar is collapsed, reduce its width */
+.sidebar.collapsed {
+  width: 50px;
+}
+
+/* Adjust the margin based on the sidebar */
+.main-content.collapsed {
+  margin-left: 50px;
+}
+
+.main-content.expanded {
+  margin-left: 220px;
 }

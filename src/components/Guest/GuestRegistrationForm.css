@@ -1,0 +1,143 @@
+.guest-registration-container {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.guest-registration-form {
+  width: 70%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.guest-registration-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.guest-registration-form .guest-form-group {
+  margin-bottom: 20px;
+}
+
+.guest-registration-form .input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guest-registration-form .input-row label {
+  flex: 1;
+  font-weight: 600;
+  color: #555;
+  margin-right: 20px;
+  min-width: 110px;
+}
+
+.guest-registration-form .input-row input[type="text"],
+.guest-registration-form .input-row input[type="tel"],
+.guest-registration-form .input-row input[type="number"],
+.guest-registration-form .input-row select {
+  flex: 2;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guest-registration-form .input-row input:focus,
+.guest-registration-form .input-row select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.guest-registration-form .otp-input-group {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.guest-registration-form .guest-send-otp-btn,
+.guest-registration-form .guest-validate-otp-btn {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.guest-registration-form .guest-send-otp-btn:hover,
+.guest-registration-form .guest-validate-otp-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.guest-registration-form .guest-send-otp-btn:disabled,
+.guest-registration-form .guest-validate-otp-btn:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.guest-registration-form .guest-schedule-btn,
+.guest-registration-form .guest-save-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.guest-registration-form .guest-schedule-btn:hover,
+.guest-registration-form .guest-save-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.guest-registration-form .error {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .guest-registration-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .guest-registration-form .input-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .guest-registration-form .input-row label {
+    margin-bottom: 5px;
+  }
+
+  .guest-registration-form .guest-form-group button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.guest-registration-form:hover {
+  transform: scale(1.02);
+}

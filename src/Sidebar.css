@@ -1,0 +1,44 @@
+/* Sidebar.css */
+
+/* Sidebar Styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f2f1; /* Adjust the color as needed */
+    color: #1c80cf; /* Text color */
+    transition: width 0.3s ease;
+    height: 100%;
+  }
+  
+  .sidebar.expanded {
+    width: 220px;
+    background-color: #1c80cf; /* Adjust the color as needed */
+  }
+  
+  .sidebar.collapsed {
+    width: 50px;
+    background-color: #1c80cf; /* Adjust the color as needed */
+  }
+  
+  .toggle-button {
+    margin: 10px;
+    background-color: #1c80cf; /* Toggle button color */
+    border: none;
+  }
+  
+  .toggle-button:hover {
+    background-color: #0046c8; /* Hover color for the toggle button */
+  }
+  
+  /* Additional styles for collapsed menu icons */
+  .collapsed-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .collapsed-menu-icon {
+    margin: 5px;
+    color: white; /* Icon color */
+    background-color: transparent; /* Transparent background */
+  }
+  

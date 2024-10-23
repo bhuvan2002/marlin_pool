@@ -1,0 +1,152 @@
+.registration-container {
+  max-width: 900px;
+  margin: 2% auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px;
+  margin: 0 5px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.active-tab {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+}
+
+.tab-button:hover {
+  background-color: #d0d0d0;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label-input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+label {
+  flex-basis: 180px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 10px;
+  text-align: right;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.navigation-button,
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+button[type="button"],
+.save-btn,
+.schedule-btn {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover,
+.save-btn:hover,
+.schedule-btn:hover {
+  background-color: #217dbb;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-left: 190px; /* Align error message under input */
+  margin-top: 5px;
+}
+.name-inputs {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.title-select {
+  width: 80px; /* This width should fit the content */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+}
