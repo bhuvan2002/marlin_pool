@@ -9,28 +9,43 @@
     left: 0; /* Align to the left */
     top: 0; /* Align to the top */
     z-index: 1000; /* Ensure it appears above other elements */
-    margin-top: 4.2%;
+    margin-top: 4.1%;
+    padding-top: 10px; /* Adjust padding to align with the image */
 }
 
 .sidebar.expanded {
-    width: 220px;
+    width: 200px; /* Adjust width to reflect image */
 }
 
 .sidebar.collapsed {
     width: 50px;
 }
 
-.toggle-button {
-    margin: 10px;
-    background-color: #1c80cf;
-    border: none;
+/* Add more space between the menu items */
+.p-panelmenu .p-panelmenu-header {
+    padding: 12px 10px; /* Increase padding */
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners to match the image */
+    margin-bottom: 10px; /* Add space between the buttons */
 }
 
-.toggle-button:hover {
-    background-color: #0046c8;
+.p-panelmenu .p-panelmenu-header.active {
+    background-color: #0046c8 !important; /* Active background color for outer items */
+    color: white !important; /* Text color for active header */
 }
 
-/* When collapsed */
+/* Adjust hover effect for a more prominent change */
+.p-panelmenu .p-panelmenu-header:hover {
+    background-color: #003bb5 !important; /* Darker blue on hover */
+}
+
+/* Make icons and text align better */
+.p-panelmenu .p-panelmenu-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for collapsed icons */
 .collapsed-menu {
     display: flex;
     flex-direction: column;
@@ -39,12 +54,13 @@
 }
 
 .collapsed-menu-icon {
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
     background-color: transparent; /* Default transparent */
     color: #ffffff; /* Text color */
     border: none; /* Remove button border */
     transition: background-color 0.3s; /* Smooth transition */
+    font-size: 1.2em; /* Increase icon size to match the image */
 }
 
 /* Active class for the button */
@@ -52,21 +68,19 @@
     background-color: #0046c8; /* Active background color */
 }
 
-/* Custom styles for PanelMenu active item */
-.p-panelmenu .p-panelmenu-header {
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.p-panelmenu .p-panelmenu-header.active {
-    background-color: #0046c8 !important; /* Active background color for outer items */
-    color: white !important; /* Text color for active header */
-}
-
-.p-panelmenu .p-panelmenu-header:hover {
-    background-color: #003bb5 !important; /* Darker blue on hover */
-}
-
 /* Optional: Add hover effect for icons */
 .collapsed-menu-icon:hover {
     background-color: #003bb5; /* Change on hover */
+}
+
+/* Button styling */
+.toggle-button {
+    margin: 10px;
+    background-color: #1c80cf;
+    border: none;
+    border-radius: 5px; /* Rounded edges for the button */
+}
+
+.toggle-button:hover {
+    background-color: #0046c8;
 }

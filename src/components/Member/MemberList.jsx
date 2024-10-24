@@ -10,12 +10,13 @@ const MemberList = () => {
   const navigate = useNavigate();
 
   const goToAboutPage = () => {
-    navigate("./NewMemberRegistration");
+    console.log("Navigating to New Member Registration"); // Debugging log
+    navigate("/NewMemberRegistration"); // Ensure this matches the route
   };
 
   const [membersExpiringToday] = useState([
     {
-      name: "Srinidhi ",
+      name: "Srinidhi",
       contact: "1234567890",
       paymentstatus: "Paid",
       payment: "5000",
@@ -46,7 +47,7 @@ const MemberList = () => {
       package: "Standard",
     },
     {
-      name: "Srinidhi ",
+      name: "Srinidhi",
       contact: "1234567890",
       paymentstatus: "Paid",
       payment: "5000",
@@ -71,7 +72,7 @@ const MemberList = () => {
       package: "Basic",
     },
     {
-      name: "Srinidhi ",
+      name: "Srinidhi",
       contact: "1234567890",
       paymentstatus: "Paid",
       payment: "15000",
@@ -88,25 +89,26 @@ const MemberList = () => {
 
   const actionTemplate = () => (
     <div>
-      <Button icon="pi pi-pencil" className="p-button-rounded  mr-2" />
-      <Button icon="pi pi-trash" className="p-button-rounded  mr-2" />
-      <Button icon="pi pi-refresh" className="p-button-rounded p-button-info" />
+      <Button icon="pi pi-pencil" className="p-button-rectangular mr-2" />
+      <Button icon="pi pi-trash" className="p-button-rectangular mr-2" />
+      <Button icon="pi pi-refresh" className="p-button-rectangular p-button-info" />
     </div>
   );
 
   return (
     <div>
-      {/* Search Box */}
-      <Button
-        label="Add Member"
-        icon="pi pi-plus"
-        className="mb-3"
-        onClick={goToAboutPage}
-      />
+      {/* Add Member Button */}
+      <div className="add-member-container">
+        <Button
+          label="Add Member"
+          icon="pi pi-plus"
+          className="add-member-button"
+          onClick={goToAboutPage}
+        />
+      </div>
 
       {/* Members List - Expiring Today */}
       <h3>Members List - Expiring Today</h3>
-
       <div className="members-container">
         <DataTable value={membersExpiringToday} className="custom-table">
           <Column field="name" header="Name" />
@@ -139,7 +141,6 @@ const MemberList = () => {
         </span>
         <InputText
           placeholder="Search Members ( Enter Name or Contact Number )"
-     
         />
       </div>
       <div className="members-container">

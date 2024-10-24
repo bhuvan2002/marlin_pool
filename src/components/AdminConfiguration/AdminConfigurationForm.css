@@ -1,0 +1,178 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light background color */
+  margin: 0;
+  padding: 20px;
+}
+
+.admin-config-form-container {
+  background: #fff; /* White background for the form */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.admin-config-tabs {
+  display: flex;
+  justify-content: space-between; /* Even spacing between tabs */
+  margin-bottom: 20px;
+}
+
+.admin-config-tab {
+  flex: 1; /* Each tab takes equal space */
+  margin-right: 10px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e9ecef; /* Light grey */
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center; /* Center text in tabs */
+}
+
+.admin-config-tab:last-child {
+  margin-right: 0; /* Remove margin for the last tab */
+}
+
+.admin-config-tab.active {
+  background-color: #007bff; /* Active tab color */
+  color: #fff;
+  font-weight: bold;
+}
+
+.admin-config-form-column {
+  margin-bottom: 25px; /* More space between columns */
+}
+
+.admin-config-form-group {
+  margin-bottom: 20px; /* More space between form groups */
+}
+
+.admin-config-form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.admin-config-form-group input[type="text"],
+.admin-config-form-group input[type="email"],
+.admin-config-form-group input[type="file"] {
+  width: 100%;
+  padding: 12px; /* Increased padding for inputs */
+  border: 1px solid #ced4da; /* Grey border */
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  font-size: 14px; /* Slightly larger font size */
+}
+
+.admin-config-form-group input[type="text"]:focus,
+.admin-config-form-group input[type="email"]:focus {
+  border-color: #007bff; /* Focused border color */
+  outline: none;
+}
+
+.admin-config-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px; /* Increased button padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  width: 100%; /* Full width buttons */
+}
+
+.admin-config-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.cancel-button {
+  background-color: #dc3545; /* Cancel button color */
+  margin-left: 10px; /* Space between buttons */
+}
+
+.cancel-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.admin-config-roles-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-config-roles-table th,
+.admin-config-roles-table td {
+  border: 1px solid #dee2e6; /* Lighter grey for table borders */
+  padding: 15px; /* Increased padding for table cells */
+  text-align: left;
+  background-color: #f8f9fa; /* Light grey background for table */
+}
+
+.admin-config-roles-table th {
+  background-color: #007bff; /* Blue header */
+  color: white;
+}
+
+.admin-config-roles-table tr:hover {
+  background-color: #e9ecef; /* Highlight row on hover */
+}
+
+.admin-config-edit-button,
+.admin-config-delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: color 0.3s;
+}
+
+.admin-config-edit-button:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.admin-config-delete-button:hover {
+  color: #dc3545; /* Change color on hover */
+}
+
+.error {
+  color: #dc3545; /* Red for error messages */
+  font-size: 0.875em;
+}
+
+.admin-config-dialog {
+  background: white;
+  padding: 25px; /* More padding in dialog */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-config-dialog h3 {
+  margin-top: 0;
+  margin-bottom: 15px; /* Space below dialog title */
+}
+
+.admin-config-dialog button {
+  margin-top: 10px; /* Add spacing above buttons in dialog */
+}
+
+@media (max-width: 768px) {
+  .admin-config-form-container {
+    padding: 20px; /* Less padding on smaller screens */
+  }
+  .admin-config-button,
+  .cancel-button {
+    width: 100%; /* Full width buttons on smaller screens */
+    margin: 5px 0; /* Margin for spacing */
+  }
+}

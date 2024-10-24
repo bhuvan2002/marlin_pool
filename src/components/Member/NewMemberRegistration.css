@@ -1,152 +1,125 @@
 .registration-container {
-  max-width: 900px;
-  margin: 2% auto;
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+h2.h2name {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #444;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.8em;
 }
 
 .registration-form {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.tab-buttons {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 25px;
-}
-
-.tab-button {
+.section {
   flex: 1;
-  padding: 12px;
-  margin: 0 5px;
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  background: linear-gradient(180deg, #f9f9f9, #ffffff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.active-tab {
-  background-color: #3498db;
-  color: white;
-  font-weight: 600;
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.tab-button:hover {
-  background-color: #d0d0d0;
-}
-
-.tab-content {
-  margin-top: 20px;
+h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.label-input-wrapper {
+.inline-form-group {
   display: flex;
-  align-items: center;
-  margin-bottom: 5px;
+  gap: 10px; /* Space between fields */
 }
 
 label {
-  flex-basis: 180px;
-  font-weight: 600;
-  color: #333;
-  margin-right: 10px;
-  text-align: right;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="file"],
-select,
-textarea {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
-  background-color: #fff;
-  color: #333;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #3498db;
-  outline: none;
-}
-
-.navigation-button,
-.submit-button {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 30px;
-}
-
-button[type="button"],
-.save-btn,
-.schedule-btn {
-  padding: 12px 24px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="button"]:hover,
-.save-btn:hover,
-.schedule-btn:hover {
-  background-color: #217dbb;
-}
-
-.error {
-  color: #e74c3c;
-  font-size: 12px;
-  margin-left: 190px; /* Align error message under input */
-  margin-top: 5px;
-}
-.name-inputs {
-  flex: 1;
-  display: flex;
-  gap: 10px;
-}
-
-.title-select {
-  width: 80px; /* This width should fit the content */
+input, select, textarea {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 12px;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+input[type='file'] {
+  border: none;
+  margin: 8px 0;
+}
+
+.send-btn, .otp-btn-verify, .submit-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
   font-size: 14px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="file"],
-select,
-textarea {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
-  background-color: #fff;
-  color: #333;
+.send-btn:hover, .otp-btn-verify:hover, .submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  width: 90px;
+  height: 50px;
+  margin-top: -70%;
+}
+
+.error {
+  color: red;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  margin-bottom: 20px; /* Add space below the button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .registration-form {
+    flex-direction: column;
+  }
+
+  .section {
+    width: 100%;
+    margin-bottom: 15px;
+  }  
 }

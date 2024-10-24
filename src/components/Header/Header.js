@@ -22,7 +22,7 @@ const Header = () => {
         />
       </div>
       <div className="fonty">
-        <h2>MARLIN AQUATIC CENTER MANAGEMENT</h2>
+        <h2 style={{ color: 'white' }}>MARLIN AQUATIC CENTER MANAGEMENT</h2>
       </div>
       <img
         src="img/User.png"

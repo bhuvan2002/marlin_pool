@@ -1,56 +1,82 @@
-/* src/components/Dashboard/Dashboard.css */
+/* Dashboard.css */
 
 .dashboard {
-    padding: 20px;
-  }
-  
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Consistent font for readability */
+  background-color: #f4f7fa; /* Light background for contrast */
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Center the header */
+  color: #333; /* Darker text for better readability */
+  font-size: 24px; /* Slightly larger font size for emphasis */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for first row */
+  gap: 50px; /* Space between cards */
+  justify-items: center; /* Center align the cards */
+}
+
+.dashboard-card {
+  background-color: #5a9bd4; /* Primary card color */
+  border-radius: 10px; /* Rounded corners for cards */
+  padding: 50px; /* Padding inside cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text alignment */
+  color: white; /* White text for contrast */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  min-width: 350px; /* Minimum width for cards */
+  max-width: 350x; /* Maximum width to maintain consistency */
+}
+
+.dashboard-card:hover {
+  background-color: #0f3c5f; /* Change color on hover for feedback */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align card content */
+}
+
+.card-title {
+  font-size: 15px; /* Larger font size for titles */
+  font-weight: bold; /* Make the title stand out */
+  margin-bottom: 0px; /* Space between title and count */
+}
+
+.card-count {
+  background-color: #1574bd; /* Background for the count circle */
+  border-radius: 50%; /* Circular shape */
+  width: 70px; /* Width for count circle */
+  height: 70px; /* Height for count circle */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  margin-top: 10px; /* Space above count circle */
+  font-size: 26px; /* Font size for count */
+  color: white; /* White text color */
+  font-weight: bold; /* Bold text for better visibility */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for count circle */
+}
+
+/* Styles for the second row */
+@media (max-width: 960px) {
   .grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
   }
-  
-  .card-container {
-    display: flex;
-    gap: 20px; /* Increased gap for better spacing */
-    justify-content: space-between; /* Use space-between for equal spacing */
-    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
   }
-  
-  .dashboard-card {
-    flex: 1 1 200px; /* Allow cards to grow and shrink with a minimum width */
-    background-color: #5a9bd4;
-    border-radius: 10px;
-    padding: 20px; /* Increased padding for better content spacing */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-align: center;
-    color: white;
-    transition: background-color 0.3s; /* Smooth background color transition */
-  }
-  
-  .dashboard-card:hover {
-    background-color: #0f3c5f; /* Change color on hover for feedback */
-  }
-  
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align card content */
-  }
-  
-  .card-count {
-    background-color: #1574bd;
-    border-radius: 50%;
-    width: 50px; /* Increased size for better visibility */
-    height: 50px; /* Increased size for better visibility */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px; /* Adjusted margin for better spacing */
-    font-size: 24px; /* Increased font size for better visibility */
-    color: white;
-    
-  }
+}

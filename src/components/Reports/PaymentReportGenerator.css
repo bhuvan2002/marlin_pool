@@ -1,0 +1,225 @@
+/* PaymentReportGenerator.css */
+
+/* General Styles */
+.payment-report-generator {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.payment-report-generator h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Label Styles */
+.payment-report-input-section label {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Dropdown and Calendar Styles */
+.p-dropdown,
+.p-calendar {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Calendar Specific Styles */
+.p-calendar {
+    background-color: white;
+}
+
+.p-calendar .p-datepicker {
+    border: 1px solid #007ad9;
+    border-radius: 5px;
+}
+
+.p-calendar .p-datepicker-header {
+    background-color: #007ad9;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Button Container Styles */
+.generate-reporter-btn {
+    align-self: center; /* Center the button */
+    margin-top: 20px; /* Space above the button */
+    margin-left: 220px;
+}
+
+/* Dialog Styles */
+.p-dialog-header {
+    background-color: #007ad9;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Table Styles */
+.p-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.p-table th,
+.p-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.p-table th {
+    background-color: #007ad9;
+    color: white;
+    font-weight: bold;
+}
+
+.p-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Hover Effect */
+.p-button:hover {
+    background-color: #0056b3;
+}
+
+/* Export Button Styles */
+.payment-report-export-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Summary Section Styles */
+.payment-report-summary-section {
+    margin-bottom: 20px;
+}
+
+.payment-report-summary-section p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+    .payment-report-generator {
+        padding: 15px;
+    }
+
+    .p-dialog {
+        width: 90vw;
+    }
+
+    .payment-report-export-buttons {
+        flex-direction: column; /* Stack buttons on smaller screens */
+        align-items: center; /* Center align buttons */
+    }
+
+    .p-button {
+        margin-bottom: 10px; /* Space between stacked buttons */
+        width: 100%; /* Full width buttons */
+    }
+}
+
+/* Styles for the p-dialog-content */
+.p-dialog-content {
+    padding: 30px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #333; /* Dark text color for readability */
+    font-size: 14px; /* Base font size */
+}
+
+/* Heading styles within the dialog content */
+.p-dialog-content h3 {
+    font-size: 20px; /* Heading size */
+    font-weight: bold; /* Bold heading */
+    color: #007ad9; /* Primary color for headings */
+    margin-bottom: 15px; /* Margin below heading */
+}
+
+/* Paragraph styles within the dialog content */
+.p-dialog-content p {
+    margin-bottom: 10px; /* Space between paragraphs */
+    line-height: 1.5; /* Improve readability with line height */
+}
+
+/* Button styles inside the dialog */
+.p-dialog-content .p-button {
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Paginator Button Styles */
+.p-paginator-page {
+    background-color: #007ad9; /* Primary background color */
+    color: white; /* Text color */
+    font-size: 14px; /* Font size */
+    padding: 10px 15px; /* Padding for spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    display: inline-flex; /* Align items in the center */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin: 5px; /* Spacing between buttons */
+}
+
+/* Hover effect */
+.p-paginator-page:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Active effect */
+.p-paginator-page:active {
+    background-color: #004085; /* Even darker blue on click */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+/* Highlighted Page Style */
+.p-highlight {
+    background-color: #0056b3; /* Highlighted background color */
+}
+
+/* Disabled State */
+.p-paginator-page:disabled {
+    background-color: #ccc; /* Light gray for disabled state */
+    color: #666; /* Dark gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+}
+
+/* Accessibility Styles */
+.p-paginator-page[aria-current="true"] {
+    font-weight: bold; /* Bold text for current page */
+    border: 2px solid #fff; /* White border for emphasis */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+    .p-paginator-page {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Additional Styles for Members Data Table */
+.payment-report-members-datatable {
+    margin-top: 20px;
+}

@@ -8,8 +8,10 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './Scheduler.css';
 
+// Create the Scheduler context
 const SchedulerContext = createContext();
 
+// Provider component
 export const SchedulerProvider = ({ children }) => {
   const [guestData, setGuestData] = useState({});
 
@@ -20,10 +22,12 @@ export const SchedulerProvider = ({ children }) => {
   );
 };
 
+// Custom hook to use the Scheduler context
 export const useScheduler = () => {
   return useContext(SchedulerContext);
 };
 
+// Scheduler component
 const Scheduler = () => {
   const { guestData, setGuestData } = useScheduler();
   const [date, setDate] = useState(new Date());
@@ -198,8 +202,6 @@ const Scheduler = () => {
       occurrence: Yup.date().required('Occurrence date is required').min(new Date(), 'Occurrence date cannot be in the past'),
     }),
     onSubmit: (values) => {
-      console.log('Form Data:', values);
-
       if (selectedRow === null || selectedColumn === null) return;
 
       const newData = { ...guestData };
@@ -282,4 +284,13 @@ const Scheduler = () => {
   );
 };
 
-export default Scheduler; 
+// Main application component
+const App = () => {
+  return (
+    <SchedulerProvider>
+      <Scheduler />
+    </SchedulerProvider>
+  );
+};
+
+export default App;

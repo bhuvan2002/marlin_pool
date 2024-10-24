@@ -1,74 +1,82 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #1c80cf;
-    color: white;
-    position: sticky;
-    height: 80px;
-    border: 2px solid #fff;
-    box-shadow: 0 0 px rgba(0, 0, 0, 0.9);
-  }
-  
-  .fonty {
-    font-family: 'Georgia', serif;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-    margin: 30px 0;
-    padding: 15px;
-  }
-  
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .company-logo {
-    width: 125px;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    transition: box-shadow 0.2s;
-  }
-  
-  .profile-photo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  .profile-overlay {
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
-  }
-  
-  .profile-options {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .profile-option {
-    margin-bottom: 0.5rem;
-  }
-  
-  .profile-option:last-child {
-    margin-bottom: 0;
-  }
-  
-  .profile-btn {
-    width: 100%;
-    text-align: left;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
-  }
-  
-  .profile-btn:hover {
-    background-color: #f0f0f0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1c80cf;
+  color: white;
+  position: sticky;
+  height: 79px;
+  width: 100%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 px rgba(250, 250, 250, 0.9);
+}
+
+.fonty {
+  font-family: 'Georgia', serif;
+  color: #fff; /* Ensure this is set to white */
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0;
+  padding: 15px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo {
+  width: 125px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-overlay {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(250, 249, 249, 0.1);
+  background-color: white;
+}
+
+.profile-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-option {
+  margin-bottom: 0.5rem;
+}
+
+.profile-option:last-child {
+  margin-bottom: 0;
+}
+
+.profile-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.profile-btn:hover {
+  background-color: #f0f0f0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white; /* Set the color of the h2 to white */
+  font-size: 24px;
+}

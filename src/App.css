@@ -6,9 +6,18 @@
   height: 100vh;
 }
 
+header {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure the header stays above other content */
+}
+
 .main-content-wrapper {
   display: flex;
   flex: 1;
+  margin-top: 60px; /* Add top margin to avoid overlapping with the fixed header */
 }
 
 .sidebar {
@@ -20,6 +29,8 @@
   flex: 1; /* This makes the main content take up the remaining space */
   padding: 20px;
   transition: margin-left 0.3s; /* Smooth transition when sidebar changes */
+  overflow-y: auto; /* Allow scrolling within the main content */
+  height: calc(100vh - 60px); /* Full height minus header height */
 }
 
 /* When the sidebar is collapsed, reduce its width */

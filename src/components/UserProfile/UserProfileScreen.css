@@ -1,0 +1,139 @@
+/* General styles for the user profile container */
+.user-profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: left; /* Align text to the left */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional font */
+}
+
+/* Title styles */
+.profile-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Styles for the form */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Styles for each form field */
+.form-field {
+    margin-bottom: 1rem; /* Consistent spacing between fields */
+    width: 100%;
+}
+
+/* Label styles */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #555; /* Softer color for labels */
+    margin-right: 100%;
+}
+
+/* Input styles */
+.form-input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    color: #333; /* Darker input text for readability */
+}
+
+/* Input focus styles */
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle focus shadow */
+}
+
+/* Error message styles */
+.error-message {
+    color: #ff3860;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Styles for input groups */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Button styles */
+.update-button,
+.cancel-button,
+.otp-button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Update button styles */
+.update-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #218838;
+}
+
+/* Cancel button styles */
+.cancel-button {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+}
+
+/* OTP button styles */
+.otp-button {
+    background-color: #007bff;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.otp-button:hover {
+    background-color: #0056b3;
+}
+
+/* Button group alignment */
+.button-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .user-profile-container {
+        padding: 1rem;
+    }
+
+    .profile-title {
+        font-size: 1.5rem;
+    }
+}
